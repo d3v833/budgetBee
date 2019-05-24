@@ -16,6 +16,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
   font-size: 62.5%;
 }
 
@@ -118,7 +121,7 @@ body {
   float: left;
   width: 3.4rem;
   font-size: 1.1rem;
-  padding: 3px 0;
+  padding: 0.3rem 0;
   margin-left: 1rem;
 }
 
@@ -176,7 +179,7 @@ body {
 }
 
 .add__btn {
-  font-size: 5.5rem;
+  font-size: 3.5rem;
   background: #fff;
   border: none;
   color: var(--color-primary);
@@ -243,7 +246,7 @@ h2 {
 }
 
 .item:first-child {
-  border-top: 0.1rem solid #e7e7e7;
+  border-top: 0.1rem solid var(--color-primary-border-1);
 }
 .item:nth-child(even) {
   background-color: #f7f7f7;
@@ -260,25 +263,25 @@ h2 {
 
 .item__percentage {
   float: left;
-  margin-left: 20px;
+  margin-left: 2rem;
   transition: transform 0.3s;
-  font-size: 11px;
-  background-color: #ffdad9;
-  padding: 3px;
-  border-radius: 3px;
-  width: 32px;
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  width: 3.2rem;
   text-align: center;
 }
 
 .income .item__value,
 .income .item__delete--btn {
-  color: #28b9b5;
+  color: var(--color-text-primary);
 }
 
 .expenses .item__value,
 .expenses .item__percentage,
 .expenses .item__delete--btn {
-  color: #ff5049;
+  color: var(--color-expense);
 }
 
 .item__delete {
@@ -286,7 +289,7 @@ h2 {
 }
 
 .item__delete--btn {
-  font-size: 22px;
+  font-size: 2.2rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -300,23 +303,23 @@ h2 {
   outline: none;
 }
 .item__delete--btn:active {
-  transform: translateY(2px);
+  transform: translateY(0.2rem);
 }
 
 .item:hover .item__delete--btn {
   display: block;
 }
 .item:hover .item__value {
-  transform: translateX(-20px);
+  transform: translateX(-2rem);
 }
 .item:hover .item__percentage {
-  transform: translateX(-20px);
+  transform: translateX(-2rem);
 }
 
 .unpaid {
-  background-color: #ffdad9 !important;
+  background-color: #000000 !important;
   cursor: pointer;
-  color: #ff5049;
+  color: var(--color-primary);
 }
 
 .unpaid .item__percentage {

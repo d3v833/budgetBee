@@ -4,12 +4,9 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  extends: "eslint:recommended",
+  extends: 'eslint:recommended',
   parserOptions: {
     ecmaVersion: 6,
-    sourceType: "module"
-  },
-  rules: {
-    quotes: ["error", "single"]
+    sourceType: 'module'
   }
 };
