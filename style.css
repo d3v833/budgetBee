@@ -2,15 +2,16 @@
 *** GENERAL
 **********************************************/
 :root {
-  --color-income: #dfc95e;
-  --color-expense: #504800;
-  --color-text-primary: #cd7f00;
-  --color-primary: #ffd040;
-  --color-primary-light: #ffdd4e;
-  --color-primary-dark: #785a00;
-  --color-primary-border-1: #ed9900;
-  --color-primary-border-2: #eec12f;
-  --color-background: #dadada;
+  --color-income: #c5d2eb;
+  --color-expense: #c25757;
+  --color-text-primary: #0d003b;
+  --color-text-secondary: #002b86;
+  --color-primary: #ffe884;
+  --color-primary-light: #fcf1c1;
+  --color-primary-dark: #ffd000;
+  --color-primary-border-1: #6a84ac;
+  --color-primary-border-2: #707070;
+  --color-background: #0e54a0;
 }
 * {
   margin: 0;
@@ -30,11 +31,10 @@ html {
 
 body {
   background-color: var(--color-primary);
-  color: var(--color-primary-dark);
+  color: var(--color-text-secondary);
   font-family: Open Sans;
   font-size: 1.6rem;
   position: relative;
-  height: 100vh;
   font-weight: 400;
 }
 
@@ -42,10 +42,10 @@ body {
   float: right;
 }
 .red {
-  color: #ff5049 !important;
+  color: var(--color-primary-border-1) !important;
 }
 .red-focus:focus {
-  border: 1px solid #ff5049 !important;
+  border: 0.3rem solid var(--color-primary-border-1) !important;
 }
 
 /**********************************************
@@ -54,7 +54,7 @@ body {
 
 .top {
   height: 40vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.35)),
     url(back.png);
   background-size: cover;
   background-position: center;
@@ -68,7 +68,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: var(--color-primary-light);
 }
 
 .budget__title {
@@ -111,7 +111,6 @@ body {
 
 .budget__income--value,
 .budget__expenses--value {
-  font-size: 1.8rem;
   letter-spacing: 0.1rem;
   float: left;
 }
@@ -126,7 +125,7 @@ body {
 }
 
 .budget__expenses--percentage {
-  background-color: var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.2);
   text-align: center;
   border-radius: 0.3rem;
 }
@@ -138,7 +137,7 @@ body {
 /***** FORM *****/
 .add {
   padding: 1.4rem;
-  border-bottom: 0.1rem solid var(--color-primary-border-1);
+  border-bottom: 0.1rem solid var(--color-primary-border-2);
 }
 
 .add__container {
@@ -148,7 +147,7 @@ body {
 
 .add__type {
   width: 5.5rem;
-  border: 0.1rem solid var(--color-primary-border-2);
+  border: 0.2rem solid var(--color-primary-light);
   height: 4.4rem;
   font-size: 1.8rem;
   color: inherit;
@@ -156,11 +155,12 @@ body {
   margin-right: 1rem;
   font-weight: 300;
   transition: border 0.3s;
+  border-radius: 0.5rem;
 }
 
 .add__description,
 .add__value {
-  border: 0.1rem solid var(--color-primary-border-2);
+  border: 0.2rem solid var(--color-primary-light);
   background-color: #fff;
   color: inherit;
   font-family: inherit;
@@ -168,7 +168,7 @@ body {
   padding: 1.2rem 1.5rem;
   margin-right: 1rem;
   border-radius: 0.5rem;
-  transition: border 0.3s;
+  transition: border 0.25s;
 }
 
 .add__description {
@@ -186,14 +186,14 @@ body {
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
-  line-height: 1rem;
+  line-height: 1.1rem;
   margin-left: 1rem;
   transform: translateY(-0.2rem);
   box-shadow: 0 2px 2px 0.06px rgba(0, 0, 0, 0.1);
 }
 
 .add__btn:active {
-  transform: translateY(0.02rem);
+  transform: translateY(0.2rem);
   box-shadow: 0 2px 2px 0.06px rgba(0, 0, 0, 0.01);
 }
 
@@ -201,7 +201,7 @@ body {
 .add__description:focus,
 .add__value:focus {
   outline: none;
-  border: 0.15rem solid var(--color-primary-dark);
+  border: 0.3rem solid #c5d2eb;
   transition: 0.02s;
 }
 
@@ -218,13 +218,12 @@ body {
 .income {
   float: left;
   width: 47.5rem;
-  margin-right: 2rem;
+  margin-right: 5rem;
 }
 
 .expenses {
   float: left;
   width: 47.5rem;
-  margin-left: 2rem;
 }
 
 h2 {
@@ -243,11 +242,11 @@ h2 {
 
 .item {
   padding: 1.3rem;
-  border-bottom: 0.1rem solid var(--color-primary-border-1);
+  border-bottom: 0.1rem solid var(--color-primary-border-2);
 }
 
 .item:first-child {
-  border-top: 0.1rem solid var(--color-primary-border-1);
+  border-top: 0.1rem solid var(--color-primary-border-2);
 }
 .item:nth-child(even) {
   background-color: #f7f7f7;
@@ -310,8 +309,10 @@ h2 {
 .item:hover .item__delete--btn {
   display: block;
 }
+
 .item:hover .item__value {
   transform: translateX(-2rem);
+  transition: all 0.3s ease;
 }
 .item:hover .item__percentage {
   transform: translateX(-2rem);
@@ -320,7 +321,7 @@ h2 {
 .unpaid {
   background-color: #fff !important;
   cursor: pointer;
-  color: var(--color-primary);
+  color: var(--color-text-secondary);
 }
 
 .unpaid .item__percentage {
