@@ -43,3 +43,7 @@ Keep a running visual / flow-chart of how the modules and functions. This high-l
 ### Step 5: Final touches - Work on additional features and styling
 
 Once the main purpose of the app is working, start styling and working on the features.
+
+### What's Next?
+
+Finish his course then rework this into a react or flutter app.
