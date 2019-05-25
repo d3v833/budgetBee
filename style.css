@@ -42,10 +42,10 @@ body {
   float: right;
 }
 .red {
-  color: var(--color-primary-border-1) !important;
+  color: var(--color-expense) !important;
 }
 .red-focus:focus {
-  border: 0.3rem solid var(--color-primary-border-1) !important;
+  border: 0.3rem solid var(--color-expense) !important;
 }
 
 /**********************************************
